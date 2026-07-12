@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  mode: debug
+  swagger_enabled: true
+
+database:
+  mysql:
+    dsn: "root:123456@tcp(123.0.0.1:3306)/ginlayout?charset=utf8mb4&parseTime=True&loc=Local"
+    max_idle_conns: 10
+    max_open_conns: 100
+
+log:
+  log_file: "logs/app.log"
+  error_file: "logs/error.log"
+  max_size: 100
+  max_backups: 3
+  max_age: 7
+  compress: true
+  level: "debug"
+
+jwt:
+  secret: "your_jwt_secret_key"
+  expire_hours: 24
